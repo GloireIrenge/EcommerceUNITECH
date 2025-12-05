@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ONLINE SHOUES — Boutique en ligne</title>
+    <meta
+      name="description"
+      content="ONLINE SHOUES - Beautiful shoes marketplace. Browse, add to cart, and checkout."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <h1>ONLINE <span class="accent">SHOUES</span></h1>
+          <p class="tagline">Find your perfect step</p>
+        </div>
+
+        <nav class="main-nav" aria-label="Main">
+          <a href="#products">Products</a>
+          <a href="#how">How it works</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <button
+            id="cartToggle"
+            class="cart-btn"
+            aria-expanded="false"
+            aria-controls="cartPanel"
+          >
+            🛒 <span id="cartCount" class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h2>Step into style</h2>
+            <p>
+              Premium shoes, fast shipping, secure checkout. Discover curated
+              collections and exclusive offers.
+            </p>
+            <a class="cta" href="#products">Shop Now</a>
+          </div>
+          <div class="hero-right">
+            <img src="shoues.jpg" alt="Shoes hero" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="products" class="container products-section">
+        <h3 class="section-title">Featured Products</h3>
+        <div id="productGrid" class="product-grid">
+          <!-- Example product cards (you can add / remove) -->
+          <article
+            class="product-card"
+            data-id="p1"
+            data-name="Classic Leather Sneaker"
+            data-price="49.99"
+          >
+            <img src="shoues.jpg" alt="Classic Leather Sneaker" />
+            <div class="product-info">
+              <h4 class="product-title">Classic Leather Sneaker</h4>
+              <p class="product-desc">
+                Comfortable everyday sneaker with premium leather.
+              </p>
+              <div class="product-meta">
+                <span class="price">$49.99</span>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-id="p2"
+            data-name="Running Pro 3000"
+            data-price="69.50"
+          >
+            <img src="shoues.jpg" alt="Running Pro 3000" />
+            <div class="product-info">
+              <h4 class="product-title">Running Pro 3000</h4>
+              <p class="product-desc">
+                Lightweight running shoe for speed and comfort.
+              </p>
+              <div class="product-meta">
+                <span class="price">$69.50</span>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-id="p3"
+            data-name="Urban Slip-Ons"
+            data-price="39.00"
+          >
+            <img src="shoues.jpg" alt="Urban Slip-Ons" />
+            <div class="product-info">
+              <h4 class="product-title">Urban Slip-Ons</h4>
+              <p class="product-desc">Easy on/off shoes for city life.</p>
+              <div class="product-meta">
+                <span class="price">$39.00</span>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-id="p4"
+            data-name="Elegant Heels"
+            data-price="79.99"
+          >
+            <img src="shoues.jpg" alt="Elegant Heels" />
+            <div class="product-info">
+              <h4 class="product-title">Elegant Heels</h4>
+              <p class="product-desc">
+                Sophisticated design for special occasions.
+              </p>
+              <div class="product-meta">
+                <span class="price">$79.99</span>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="container how-section">
+        <h3 class="section-title">How it works</h3>
+        <div class="how-grid">
+          <div class="how-item">
+            <h4>Browse</h4>
+            <p>Choose from our curated collection.</p>
+          </div>
+          <div class="how-item">
+            <h4>Add to cart</h4>
+            <p>Select size & quantity, then add to cart.</p>
+          </div>
+          <div class="how-item">
+            <h4>Secure checkout</h4>
+            <p>Pay securely with your preferred method.</p>
+          </div>
+          <div class="how-item">
+            <h4>Fast shipping</h4>
+            <p>We ship quickly with tracking included.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / Footer CTA -->
+      <section id="contact" class="container contact-section">
+        <h3 class="section-title">Contact</h3>
+        <p>
+          Questions? Email us at
+          <a href="mailto:hello@onlineshoues.example"
+            >hello@onlineshoues.example</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <!-- Cart Panel (hidden by default) -->
+    <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+      <header class="cart-header">
+        <h4>Your Cart</h4>
+        <button id="closeCart" aria-label="Close cart">✕</button>
+      </header>
+
+      <div id="cartItems" class="cart-items">
+        <!-- items inserted here by JS -->
+        <p class="empty-message">Your cart is empty.</p>
+      </div>
+
+      <footer class="cart-footer">
+        <div class="totals">
+          <div>Subtotal</div>
+          <div id="cartSubtotal">$0.00</div>
+        </div>
+        <div class="cart-actions">
+          <button id="checkoutBtn" class="btn primary">Checkout</button>
+          <button id="clearCart" class="btn ghost">Clear</button>
+        </div>
+      </footer>
+    </aside>
+  </body>
+</html>
